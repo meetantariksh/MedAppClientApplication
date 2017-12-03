@@ -55,7 +55,8 @@ public class LandingPage_daoImpl implements LandingPage_dao {
 	    String output = null;
 	    Gson gson = null;
 		try{
-			apiUrI = "https://newsapi.org/v2/everything?sources=medical-news-today";
+			//apiUrI = "https://newsapi.org/v2/everything?sources=medical-news-today";
+			apiUrI = "https://newsapi.org/v2/top-headlines?sources=national-geographic";
 			strBuf = new StringBuilder();  
 			URL url = new URL(apiUrI);  
 			conn = (HttpURLConnection)url.openConnection();
