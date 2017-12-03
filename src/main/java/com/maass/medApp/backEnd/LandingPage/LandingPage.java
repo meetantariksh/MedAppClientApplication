@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.maass.medApp.backEnd.Beans.OurDoctorsBean;
+import com.maass.medApp.backEnd.Beans.MedicalNews.NewsHeadLines;
 import com.maass.medApp.backEnd.dao.LandingPage_dao;
 
 @RestController
@@ -26,6 +27,17 @@ public class LandingPage {
 			exp.printStackTrace();
 		}
 		return ourDoctorsBeans;
+	}
+	
+	@RequestMapping("/getNewsHeadlines")
+	public NewsHeadLines getNewsHeadlines(){
+		NewsHeadLines newsHeadLines = null;
+		try{
+			newsHeadLines = landingPage_dao.getNewsHeadLines();
+		}catch(Exception exp){
+			exp.printStackTrace();
+		}
+		return newsHeadLines;
 	}
 
 }
