@@ -98,4 +98,14 @@ public class LandingPage_daoImpl implements LandingPage_dao {
 		return headLines;
 	}
 	
+	public boolean sendEmail(){
+		boolean isSuccess = false;
+		try{
+			
+		}catch (Exception exp){
+			exp.printStackTrace();
+		}
+		return isSuccess;
+	}
+	
 }
